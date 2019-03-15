@@ -4,15 +4,6 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
    <script src="http://malsup.github.com/jquery.form.js"></script>
-   <script>
-        // wait for the DOM to be loaded
-        $(document).ready(function() {
-            // bind 'myForm' and provide a simple callback function
-            $('#myForm').ajaxForm(function() {
-                alert("can't wait to email u!");
-            });
-        });
-    </script>
    <title> Die Virgin Scum : A Novel </title>
 </head>
 <div class = "topbar">
@@ -96,7 +87,7 @@
     <p> coming March 22nd 2019! want to be notified when the next hot chapter is out?? <br> sign up below!! </p>
     </div>
     <div class="content">
-      <form id="myForm" action="emails.php" method="post">
+      <form action="emails.php" method="post">
         <div class="form">
           e-mail: <input type="text" name="Email" />
         </div>
