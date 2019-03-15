@@ -1,0 +1,223 @@
+body {
+  background: black;
+  animation: opacity 6s 1 linear;
+
+}
+
+img {
+  width: 50%;
+}
+
+.videos {
+  margin: auto;
+  width: 80%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.videocontainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  -webkit-box-shadow:0px 0px 50px 5px #ff0000 ;
+  -moz-box-shadow:0px 0px 50px 5px #ff0000 ;
+  box-shadow:0px 0px 50px 5px #ff0000 ;
+}
+
+.videocontainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.sidebar {
+  height: 100%;
+  width: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+img:hover {
+  width: 100%;
+  transition: .2s ease;
+}
+
+.main {
+  margin-right: 80px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+
+
+
+@keyframes opacity {
+  0%   {opacity: 0;}
+  50%  {opacity: .5;}
+  100% {opacity: 1;}
+
+}
+
+
+
+.container {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+
+
+wrap {
+	perspective: 800px;
+	perspective-origin: 50% 100px;
+}
+
+
+.flying {
+  position: relative;
+  padding: auto;
+  margin: auto;
+  animation-name: fly;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  -webkit-perspective: 200px; /* Safari 4-8  */
+  perspective: 200px;
+  transform-style: preserve-3d;
+
+}
+
+.flyingtruck {
+  position: absolute;
+  z-index: -1;
+  animation-name: flytruck;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+}
+
+.flyingstars {
+  position: absolute;
+  z-index: -2;
+  animation-name: flystars;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+}
+
+@keyframes fly {
+    0%   {left:0px; top:0px;}
+    25%  {left:400px; top:0px;}
+    50%  {left:400px; top:-800px;}
+    75%  {left:0px; top:-800px;}
+    100%  {left:0px; top:0px;}
+}
+
+@keyframes flytruck {
+    0%   {left:0px; top:0px;}
+    50%  {left:0px; top:1200px;}
+    100%  {left:0px; top:0px;}
+}
+
+@keyframes flystars {
+    0%   {left:0px; top:1000px;}
+    50%  {left:0px; top:-200px;}
+    100%  {left:0px; top:1000px;}
+}
+
+@keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+
+.png {
+  width: 10%;
+  margin: auto;
+}
+
+.perspective {
+  position: absolute;
+  transform: rotateY(0deg) translateX(100px);
+  transform-origin: top right;
+  border: 1px solid red;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: spin 20s infinite linear;
+}
+
+.navigation {
+  border:none;
+  background-color: black;
+  text-align: Center;
+  font-size: 1em;
+  padding-bottom: .2em;
+  letter-spacing: 2px;
+  height: 3.5em;
+  width: 20em;
+  position: fixed;
+  left: 50%;
+  margin-left: -10em;
+  bottom: -1.75em;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+li {
+  display: inline;
+}
+
+a:link {
+    color: #540000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #540000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+    letter-spacing: .5em;
+}
+
+a:active {
+    color: #540000;
+    background-color: transparent;
+    text-decoration: none;
+
+}

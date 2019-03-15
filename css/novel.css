@@ -1,0 +1,89 @@
+body {
+    background: black;
+    letter-spacing: 6px;
+    word-spacing: 3.8px;
+    color: white;
+    animation: opacity 2s 1 linear;
+}
+p {
+  font-size: 1em;
+  letter-spacing: 3px;
+  word-spacing: 3.8px;
+  color: #95FF33;
+
+}
+
+@keyframes opacity {
+  0%   {opacity: 0;}
+  50%  {opacity: .5;}
+  100% {opacity: 1;}
+
+}
+
+.navigation {
+  border:none;
+  background-color: black;
+  text-align: Center;
+  font-size: .9em;
+  padding-bottom: .2em;
+  letter-spacing: 2px;
+  height: 3.5em;
+  width: 20em;
+  position: fixed;
+  left: 50%;
+  margin-left: -10em;
+  bottom: -1.75em;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+li {
+  display: inline;
+}
+
+
+.topbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+a:link {
+    color: #540000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #540000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+    letter-spacing: .5em;
+}
+
+a:active {
+    color: #540000;
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+.form {
+  float: left;
+  padding-right: .5em;
+}

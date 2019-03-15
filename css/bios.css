@@ -1,0 +1,231 @@
+
+
+html {
+}
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 25px;
+  letter-spacing: 6px;
+  word-spacing: 3.8px;
+  color: white;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  height: 100%;
+  animation: opacity 4s 1 linear;
+}
+
+.black {
+  background: black
+}
+
+.bglovelet {
+  background: black url(../images/lovelet.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bgalex {
+  background: black url(../images/alexbg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #002BFF;
+}
+
+.bgkisschasm {
+  background: black url(../images/kisschasmbg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bgkaren {
+  background: black url(../images/karennude.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bgsorry {
+  background: black url(../images/surabg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+img {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+}
+
+.textkaren {
+  z-index: 7;
+  position: relative;
+  animation: opacity 2s linear infinite
+}
+
+.img1 {
+  width: 30%;
+  z-index: 1;
+  position: relative;
+  animation: spin 10s infinite linear;
+}
+
+.img2 {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  top: -200px;
+  left: 0px;
+  animation: spin 30s infinite linear;
+}
+
+.img3 {
+  width: 100%;
+  z-index: 3;
+  position: relative;
+  top: -1300px;
+  animation: spin 50s infinite linear;
+}
+
+.img4 {
+  width: 30%;
+  z-index: 4;
+  position: relative;
+  top: -1600px;
+  animation: spin 40s infinite linear;
+}
+
+.img5 {
+  width: 10%;
+  z-index: 5;
+  position: relative;
+  top: -2000px;
+  left: 400px;
+  animation: spin 20s infinite linear;
+}
+
+.img6 {
+  width: 40%;
+  z-index: 5;
+  position: relative;
+  animation: spin 20s infinite linear;
+}
+
+
+.spin {
+  display: block;
+  width: 100%;
+  position: relative;
+  perspective: 800px;
+  perspective-origin: 50% 100px;
+}
+
+.fly {
+  animation: fly 20s infinite linear;
+}
+
+
+@keyframes spin {
+  0%   { transform: rotateY(0); }
+  50%  { transform: rotateY(360deg); }
+  100% { transform: rotateY(0); }
+
+}
+
+@keyframes fly {
+    0%   {left:0px; top:0px;}
+    50%  {left:0px; top:1400px;}
+    100%  {left:0px; top:0px;}
+}
+
+.bghannah {
+  background: black url(../images/symfan.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bgoctane {
+  background: black url(../images/oceane.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.bgborscht {
+  background: black url(../images/borscht.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bglovelet {
+  background: black url(../images/lovelet1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #e20404;
+  letter-spacing: 4px;
+}
+
+
+.bglowell {
+    background: url(../images/lowellbg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bgjoyscouts {
+  color: #34f93e;
+}
+
+.navigation {
+  border:none;
+  background-color: none;
+  text-align: Center;
+  font-size: .9em;
+  padding-bottom: .2em;
+  letter-spacing: 2px;
+  height: 3.5em;
+  width: 20em;
+  position: fixed;
+  left: 50%;
+  margin-left: -10em;
+  bottom: -1.75em;
+  cursor: pointer;
+}
+
+
+
+@keyframes opacity {
+  0%   {opacity: 0;}
+  50%  {opacity: .5;}
+  100% {opacity: 1;}
+
+}

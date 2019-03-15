@@ -1,0 +1,210 @@
+body {
+  background: black;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 25px;
+  letter-spacing: 6px;
+  word-spacing: 3.8px;
+  color: white;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  animation: opacity 4s 1 linear;
+
+}
+
+table {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+.box {
+	display: flex;
+}
+
+.box .inner {
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 1em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: black;
+	color: darkred;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+	background-color: black;
+	color: white;
+	transform-origin: left;
+	transform: perspective(50px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
+}
+
+@keyframes opacity {
+  0%   {opacity: 0;}
+  50%  {opacity: .5;}
+  100% {opacity: 1;}
+
+}
+
+
+
+
+.container {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+
+
+
+iframe {
+  width: 560px;
+  height: 315px;
+  animation: grow 30s infinite linear;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+wrap {
+	perspective: 800px;
+	perspective-origin: 50% 100px;
+}
+
+a:link, visited, hover, active {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 65%;
+  letter-spacing: 6px;
+  word-spacing: 3.8px;
+  color: red;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+
+}
+
+.flying {
+  position: relative;
+  padding: auto;
+  margin: auto;
+  animation-name: fly;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  -webkit-perspective: 200px; /* Safari 4-8  */
+  perspective: 200px;
+  transform-style: preserve-3d;
+
+}
+
+
+
+
+
+.flyingtruck {
+  position: absolute;
+  z-index: -1;
+  animation-name: flytruck;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+}
+
+.flyingstars {
+  position: relative;
+  z-index: -2;
+  animation-name: flystars;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+
+}
+
+@keyframes fly {
+    0%   {left:0px; top:0px;}
+    25%  {left:400px; top:0px;}
+    50%  {left:400px; top:-600px;}
+    75%  {left:0px; top:-600px;}
+    100%  {left:0px; top:0px;}
+}
+
+@keyframes flytruck {
+    0%   {left:0px; top:0px;}
+    50%  {left:0px; top:1200px;}
+    100%  {left:0px; top:0px;}
+}
+
+@keyframes flystars {
+    0%   {left:0px; top:-400px;}
+    50%  {left:0px; top:-1600px;}
+    100%  {left:0px; top:-400px;}
+}
+
+@keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+
+.png {
+  width: 10%;
+  margin: auto;
+}
+
+.perspective {
+  position: absolute;
+  transform: rotateY(0deg) translateX(100px);
+  transform-origin: top right;
+  border: 1px solid red;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: spin 20s infinite linear;
+}
+
+.navtable {
+  display: inline-block;
+  transition: transform 1s;
+  webkit transition: transform 1s
+}
+
+.navtable:hover {
+  transform: scale(3);
+}
