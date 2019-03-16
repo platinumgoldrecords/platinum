@@ -1,7 +1,40 @@
-@media screen and (max-width:600px) {
+
+@media screen and (max-width: 600px) {
+
   #navcomp, .perspective, .flying, .navtable {
     display: none;
     visibility: hidden;
+  }
+
+  .navigation {
+    border:none;
+    background:black;
+    text-align: Center;
+    font-size: 1em;
+    padding-bottom: 1em;
+    height: 3.5em;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    margin-left: -10em;
+    bottom: -1.75em;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  li {
+    display: inline;
+  }
+
+  .flying {
+    animation-name: none;
   }
 }
 
