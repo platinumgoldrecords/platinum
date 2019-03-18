@@ -10,7 +10,7 @@ img {
 
 .videos {
   margin: auto;
-  width: 80%;
+  width: 90%;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -36,6 +36,7 @@ img {
 
 
 .sidebar {
+  display: none;
   height: 100%;
   width: 80px;
   position: fixed;
@@ -53,11 +54,6 @@ img {
   font-size: 20px;
   color: #818181;
   display: block;
-}
-
-img:hover {
-  width: 100%;
-  transition: .2s ease;
 }
 
 .main {
@@ -168,7 +164,59 @@ wrap {
   animation: spin 20s infinite linear;
 }
 
+.mobilenav {
+    border:none;
+    background: transparent;
+    text-align: left;
+    font-size: 1em;
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    overflow: hidden;
+}
+.mobilenav #myLinks {
+  display: none;
+  padding-top: 60px;
+}
+.mobilenav a.icon {
+  background: red;
+  display: block;
+  position: fixed;
+  margin: 10px;
+  padding: 5px;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+.mobilenav img {
+  width: 30px;
+}
+.mobilenav ul {
+    list-style-type: none;
+    margin: 0;
+}
+.mobilenav li {
+    display: block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    padding: 10px;
+    background: black;
+}
+.mobilenav a {
+  font-family: Verdana, Geneva, sans-serif;
+  letter-spacing: .1em;
+}
+.mobilenav a:link, visited, hover, active {
+  color: red;
+  text-decoration: none;
+}
+
+
 .navigation {
+  display: none;
   border:none;
   background-color: black;
   text-align: Center;
@@ -183,41 +231,58 @@ wrap {
   bottom: -1.75em;
   cursor: pointer;
 }
-
-ul {
+.navigation ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
-
-
-li {
+.navigation li {
   display: inline;
 }
 
-a:link {
-    color: #540000;
-    background-color: transparent;
-    text-decoration: none;
-}
 
-a:visited {
-    color: #540000;
-    background-color: transparent;
-    text-decoration: none;
-}
+@media screen and (min-width: 40em) {
+  .mobilenav {
+    display: none;
+  }
+  .videos {
+    width: 80%;
+  }
 
-a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: none;
-    letter-spacing: .5em;
-}
+  img:hover {
+    width: 100%;
+    transition: .2s ease;
+  }
 
-a:active {
-    color: #540000;
-    background-color: transparent;
-    text-decoration: none;
+  .sidebar {
+    display: block;
+  }
 
+  .navigation {
+    display: block;
+  }
+  a:link {
+      color: #540000;
+      background-color: transparent;
+      text-decoration: none;
+  }
+
+  a:visited {
+      color: #540000;
+      background-color: transparent;
+      text-decoration: none;
+  }
+
+  a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: none;
+      letter-spacing: .5em;
+  }
+
+  a:active {
+      color: #540000;
+      background-color: transparent;
+      text-decoration: none;
+  }
 }

@@ -17,6 +17,10 @@ body {
   animation: opacity 4s 1 linear;
 }
 
+a {
+  text-decoration: none;
+}
+
 .black {
   background: black
 }
@@ -164,6 +168,9 @@ img {
   -o-background-size: cover;
   background-size: cover;
 }
+.hannahtext {
+  font-size: 1em;
+}
 
 .bgoctane {
   background: black url(../images/oceane.jpg) no-repeat center center fixed;
@@ -207,18 +214,18 @@ img {
 
 .navigation {
   border:none;
-  background-color: none;
-  text-align: Center;
-  font-size: .9em;
+  background-color: white;
+  text-align: left;
+  font-size: 1em;
   padding-bottom: .2em;
   letter-spacing: 2px;
-  height: 3.5em;
+  height: 1em;
   width: 20em;
   position: fixed;
-  left: 50%;
-  margin-left: -10em;
-  bottom: -1.75em;
+  left: 0;
+  bottom: 0;
   cursor: pointer;
+  z-index: 20;
 }
 
 
@@ -227,5 +234,21 @@ img {
   0%   {opacity: 0;}
   50%  {opacity: .5;}
   100% {opacity: 1;}
+
+}
+
+@media screen and (min-width: 40em) {
+  .navigation {
+    left: 50%;
+    height: 3.5em;
+    margin-left: -10em;
+    padding-bottom: .2em;
+    bottom: -1.75em;
+    text-align: center;
+    background-color: transparent;
+  }
+  .hannahtext {
+    font-size: 3em;
+  }
 
 }

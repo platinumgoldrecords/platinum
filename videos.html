@@ -68,6 +68,26 @@
       <li><a href="contact.html">contct</a></li>
     </ul>
   </div>
+  <div class="mobilenav" id="mobilenav">
+    <div id="myLinks">
+      <li><a href="index.html">home</a></li>
+      <li><a href="artists.html">artists</a></li>
+      <li><a href="contact.html">contct</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="literature.html">novel</a></li>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="images/menu.png" class="menu" width="30px"></a>
+  </div>
+  <script>
+    function myFunction() {
+     var x = document.getElementById("myLinks");
+     if (x.style.display === "block") {
+       x.style.display = "none";
+     } else {
+       x.style.display = "block";
+     }
+   }
+  </script>
 </body>
 
 </html>

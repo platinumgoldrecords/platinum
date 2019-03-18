@@ -125,3 +125,7 @@ a:link, visited, hover, active {
   text-transform: uppercase;
 
 }
+
+@media screen and (min-width: 40em) {
+  
+}

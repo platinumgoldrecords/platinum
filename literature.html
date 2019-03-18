@@ -1,11 +1,24 @@
 <html>
 <head>
    <link rel="stylesheet" href="css/novel.css">
+   <link rel="stylesheet" href="css/style.css">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+   <script src="http://malsup.github.com/jquery.form.js"></script>
    <title> Die Virgin Scum : A Novel </title>
 </head>
 <div class = "topbar">
 <span> new chapter every Friday!!!! chpt <a href="#chapterone">1</a> <a href="#chaptertwo">2</a> </span>
+<div class="mobilenav" id="mobilenav">
+  <div id="myLinks">
+    <li><a href="index.html">home</a></li>
+    <li><a href="artists.html">artists</a></li>
+    <li><a href="contact.html">contct</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="literature.html">novel</a></li>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="images/menu.png" class="menu" width="30px"></a>
+</div>
 </div>
 <br>
 <div class="container">
@@ -82,9 +95,21 @@
     </div>
     <div id ="chaptertwo"> <h2> CHAPTER TWO <h2> </div>
     <div class="content">
-    <p> coming March 22nd 2019! </p>
+    <p> coming March 22nd 2019! want to be notified when the next hot chapter is out?? <br> sign up below!! </p>
     </div>
-    <br> <br> <br>
+    <div id="form-messages"></div>
+    <div class="content">
+      <form id="ajaxcontact" action="mailheader.php" method="post">
+        <div class="form">
+          e-mail: <input type="text" name="email" required />
+        </div>
+        <div class="button">
+            <input type="submit" value="Submit ;)" name="submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div> <br> <br> <br>
 <div class="bottombar">
   <ul class="navigation">
     <li><a href="index.html">home</a></li>
@@ -94,5 +119,15 @@
     <li><a href="contact.html">contct</a></li>
   </ul>
 </div>
+<script>
+  function myFunction() {
+   var x = document.getElementById("myLinks");
+   if (x.style.display === "block") {
+     x.style.display = "none";
+   } else {
+     x.style.display = "block";
+   }
+ }
+</script>
 </body>
 </html>

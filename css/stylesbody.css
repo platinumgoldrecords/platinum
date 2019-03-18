@@ -1,5 +1,78 @@
+
+
+
+#navcomp, .perspective, .flying, .navtable {
+    display: none;
+}
+
+
+.backtext {
+  padding-top: 40px;
+}
+
+.mobilenav {
+  border:none;
+  background: transparent;
+  text-align: left;
+  font-size: 1em;
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 90%;
+  overflow: hidden;
+}
+
+.mobilenav #myLinks {
+  display: none;
+  padding-top: 60px;
+  padding-left: 10px;
+}
+
+
+.mobilenav a.icon {
+  background: red;
+  display: block;
+  position: fixed;
+  padding: 10px;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.mobilenav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+
+.mobilenav li {
+  display: block;
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  padding: 10px;
+  background: black;
+  text-transform: none;
+  font-size: 1em;
+}
+
+.mobilenav a {
+  font-family: Verdana, Geneva, sans-serif;
+  letter-spacing: .1em;
+}
+
+.mobilenav a:link, visited, hover, active {
+  color: red;
+  text-decoration: none;
+}
+
+.flying {
+    animation-name: none;
+}
+
 body {
   background: black;
+  width: 80%;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 25px;
   letter-spacing: 6px;
@@ -104,36 +177,6 @@ wrap {
 	perspective-origin: 50% 100px;
 }
 
-a:link, visited, hover, active {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 65%;
-  letter-spacing: 6px;
-  word-spacing: 3.8px;
-  color: red;
-  font-weight: 400;
-  text-decoration: none solid rgb(68, 68, 68);
-  font-style: normal;
-  font-variant: normal;
-  text-transform: uppercase;
-
-}
-
-.flying {
-  position: relative;
-  padding: auto;
-  margin: auto;
-  animation-name: fly;
-  animation-duration: 40s;
-  animation-iteration-count: infinite;
-  -webkit-perspective: 200px; /* Safari 4-8  */
-  perspective: 200px;
-  transform-style: preserve-3d;
-
-}
-
-
-
-
 
 .flyingtruck {
   position: absolute;
@@ -156,7 +199,6 @@ a:link, visited, hover, active {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-
 }
 
 @keyframes fly {
@@ -189,22 +231,93 @@ a:link, visited, hover, active {
   margin: auto;
 }
 
-.perspective {
-  position: absolute;
-  transform: rotateY(0deg) translateX(100px);
-  transform-origin: top right;
-  border: 1px solid red;
-  display: inline-block;
-  transform-style: preserve-3d;
-  animation: spin 20s infinite linear;
+
+
+@media screen and (min-width: 40em) {
+
+  .body {
+    width: 100%;
+  }
+
+  #mobilenav {
+    display: none;
+  }
+
+  #navcomp {
+    display: block;
+  }
+
+  .navtable {
+    display: inline-block;
+    transition: transform 1s;
+    webkit transition: transform 1s
+  }
+
+  .backtext {
+    padding-top: 10px;
+  }
+
+  .navtable:hover {
+    transform: scale(3);
+  }
+
+  .perspective {
+    position: absolute;
+    transform: rotateY(0deg) translateX(100px);
+    transform-origin: top right;
+    border: 1px solid red;
+    display: inline-block;
+    transform-style: preserve-3d;
+    animation: spin 20s infinite linear;
+  }
+  .flying {
+    position: relative;
+    display: block;
+    padding: auto;
+    margin: auto;
+    animation-name: fly;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    -webkit-perspective: 200px; /* Safari 4-8  */
+    perspective: 200px;
+    transform-style: preserve-3d;
+  }
+
+  a:link, visited, hover, active {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 65%;
+    letter-spacing: 6px;
+    word-spacing: 3.8px;
+    color: red;
+    font-weight: 400;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
 }
 
-.navtable {
-  display: inline-block;
-  transition: transform 1s;
-  webkit transition: transform 1s
+a:link {
+      color: #540000;
+      background-color: transparent;
+      text-decoration: none;
 }
 
-.navtable:hover {
-  transform: scale(3);
+a:visited {
+      color: #540000;
+      background-color: transparent;
+      text-decoration: none;
+}
+
+a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: none;
+      letter-spacing: .5em;
+}
+
+a:active {
+      color: #540000;
+      background-color: transparent;
+      text-decoration: none;
+
 }
