@@ -27,12 +27,11 @@ p {
   text-align: Center;
   font-size: .9em;
   padding-bottom: .2em;
+  padding-top: .2em;
   letter-spacing: 2px;
   height: 3.5em;
-  width: 20em;
+  width: 100%;
   position: fixed;
-  left: 50%;
-  margin-left: -10em;
   bottom: -1.75em;
   cursor: pointer;
 }
@@ -73,7 +72,7 @@ p {
   display: block;
   position: fixed;
   padding-right: 10px;
-  padding-top: 5px; 
+  padding-top: 5px;
   z-index: 1;
   right: 0;
   top: 0;
