@@ -222,13 +222,13 @@ wrap {
   text-align: Center;
   font-size: 1em;
   padding-bottom: .2em;
+  padding-top: .2em;
   letter-spacing: 2px;
-  height: 3.5em;
-  width: 20em;
+  height: 2em;
+  width: 100%;
   position: fixed;
-  left: 50%;
-  margin-left: -10em;
   bottom: -1.75em;
+  left: 0;
   cursor: pointer;
 }
 .navigation ul {
