@@ -114,10 +114,15 @@ img {
 }
 
 .column {
-  float: left;
-  width: 50%;
+  float: none;
+  width: 100%;
+  padding-top: 30%;
   transform-style: preserve-3d;
   animation: spin 15s infinite ease-in-out;
+}
+
+.column a {
+  color: #95FF33; 
 }
 
 .row:after {
@@ -128,6 +133,11 @@ img {
 
 @media screen and (min-width: 40em) {
 
+  .column {
+    float: left;
+    width: 50%;
+    padding-top: 0;
+  }
   body {
     width: 100%;
   }
